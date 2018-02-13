@@ -17,8 +17,8 @@ configuration PrepSFCI
         [Int]$RetryIntervalSec = 30
     )
 
-    Import-DscResource -ModuleName xComputerManagement, xActiveDirectory, xSQLServer, xPendingReboot, xNetworking
-
+    Import-DscResource -ModuleName xComputerManagement, xActiveDirectory,  xPendingReboot, xNetworking
+    Import-DscResource  -ModuleName  xSQLServer -ModuleVersion 6.0.0.0
     [System.Management.Automation.PSCredential]$DomainCreds = New-Object System.Management.Automation.PSCredential ("${DomainNetbiosName}\$($Admincreds.UserName)", $Admincreds.Password)
     [System.Management.Automation.PSCredential]$DomainFQDNCreds = New-Object System.Management.Automation.PSCredential ("${DomainName}\$($Admincreds.UserName)", $Admincreds.Password)
     
