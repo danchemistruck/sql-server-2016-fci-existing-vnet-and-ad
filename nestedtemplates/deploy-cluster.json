@@ -101,7 +101,7 @@
       "defaultValue": "latest"
     },
     "_artifactsLocation": {
-      "type": "string"
+      "type": "string",
       "defaultValue": "https://raw.githubusercontent.com/danchemistruck/sql-server-2016-fci-existing-vnet-and-ad/master"
     },
     "_artifactsLocationSasToken": {
