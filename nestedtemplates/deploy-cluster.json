@@ -102,6 +102,7 @@
     },
     "_artifactsLocation": {
       "type": "string"
+      "defaultValue": "https://raw.githubusercontent.com/danchemistruck/sql-server-2016-fci-existing-vnet-and-ad/master"
     },
     "_artifactsLocationSasToken": {
       "type": "string"
@@ -115,10 +116,10 @@
     "vmAvailabilitySetName": "[concat(variables('vmNamePrefix'),'as')]",
     "clusterName": "[concat(variables('vmNamePrefix'),'c')]",
     "sqlClusterName": "[concat(variables('vmNamePrefix'),'sql')]",
-    "vmLoopTemplateURL": "[concat(parameters('_artifactsLocation'),'/nestedtemplates/newVM.json',parameters('_artifactsLocationSasToken'))]",
-    "sfciPrepModulesURL": "[concat(parameters('_artifactsLocation'),'/dsc/prep-sfci.ps1.zip',parameters('_artifactsLocationSasToken'))]",
+    "vmLoopTemplateURL": "[concat('https://raw.githubusercontent.com/danchemistruck/sql-server-2016-fci-existing-vnet-and-ad/master/nestedtemplates/newVM.json',parameters('_artifactsLocationSasToken'))]",
+    "sfciPrepModulesURL": "[concat('https://raw.githubusercontent.com/danchemistruck/sql-server-2016-fci-existing-vnet-and-ad/master/dsc/prep-sfci.ps1.zip',parameters('_artifactsLocationSasToken'))]",
     "sfciPrepFunction": "PrepSFCI.ps1\\PrepSFCI",
-    "sfciConfigModulesURL": "[concat(parameters('_artifactsLocation'),'/dsc/config-sfci.ps1.zip',parameters('_artifactsLocationSasToken'))]",
+    "sfciConfigModulesURL": "[concat('https://raw.githubusercontent.com/danchemistruck/sql-server-2016-fci-existing-vnet-and-ad/master/dsc/config-sfci.ps1.zip',parameters('_artifactsLocationSasToken'))]",
     "sfciConfigFunction": "ConfigSFCI.ps1\\ConfigSFCI",
     "ilbName": "[concat(parameters('namePrefix'),'-ilb')]",
     "ilbID": "[resourceId('Microsoft.Network/loadBalancers',variables('ilbName'))]",
