@@ -40,6 +40,12 @@
     },
     "clusterIP": {
       "value": "192.168.0.100"
+    },
+    "_artifactsLocation": {
+      "value": "https://raw.githubusercontent.com/tanchunsiong/sql-server-2016-fci-existing-vnet-and-ad/master"
+    },
+    "_artifactsLocationSasToken": {
+      "value": ""
     }
   }
 }
